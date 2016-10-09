@@ -1,0 +1,33 @@
+{
+  "name": "iwak-framework",
+  "version": "1.0.0",
+  "description": "A micro-framework based on express.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "micro-framework",
+    "expressjs-mvc"
+  ],
+  "author": "IWAK Developers <developer@iwak.me>",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "bookshelf": "^0.10.2",
+    "dotenv": "^2.0.0",
+    "express": "^4.14.0",
+    "helmet": "^2.3.0",
+    "knex": "^0.12.2",
+    "validator": "^6.0.0",
+    "winston": "^2.2.0"
+  },
+  "devDependencies": {
+    "mocha": "^3.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iwakme/iwak-framework.git"
+  },
+  "homepage": "https://github.com/iwakme/iwak-framework#readme"
+}
