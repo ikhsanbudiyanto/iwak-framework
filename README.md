@@ -78,7 +78,7 @@ and, since it will retreive `bookshelf` object, so you can add plugin on it:
 
 Now, for file `config/http.js`. It contain http server and will be loaded by `iwak-framework` with `express` object:
 
-```js
+```diff
 + 'use strict';
 + const http   = require('http');
 + 
@@ -183,9 +183,9 @@ Done! Now access to [http://localhost:3000/api/example](http://localhost:3000/ap
 
 ```json
 {
-  status: true,
-  data: {
-    foo: "bar"
+  "status": true,
+  "data": {
+    "foo": "bar"
   }
 }
 ```
