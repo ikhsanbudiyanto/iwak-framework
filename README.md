@@ -45,7 +45,7 @@ First of all, you need to make project structure like this:
 
 Now, let see `config/app.js` file, it must contain an express configuration, i.e setting `Access-Control-Allow-Origin`. As you expect, it just contain express middleware like this:
 
-```js
+```diff
 + 'use strict';
 +
 + module.exports = function (app) {
@@ -59,7 +59,7 @@ Now, let see `config/app.js` file, it must contain an express configuration, i.e
 
 then, we'll focus on file `config/database.js`. This file will be loaded by `iwak-framework` with `bookshelf` object, so you must write it like follow:
 
-```js
+```diff
 + 'use strict';
 + module.exports = function (bookshelf) {
 +
@@ -68,7 +68,7 @@ then, we'll focus on file `config/database.js`. This file will be loaded by `iwa
 
 and, since it will retreive `bookshelf` object, so you can add plugin on it:
 
-```
+```diff
 + 'use strict';
 + module.exports = function (bookshelf) {
 +   bookshelf.plugin('visibility');
@@ -93,7 +93,7 @@ Now, for file `config/http.js`. It contain http server and will be loaded by `iw
 
 Ok, then in file `server.js` where located in project root, we'll put this code to make app running:
 
-```js
+```diff
 + 'use strict';
 +
 + const app = require('iwak-framework');
@@ -109,7 +109,7 @@ Sorry, I'm not forget it, but now I will tell you what is it.
 
 `app/routes.js` will contain http route code. For example, you can write:
 
-```js
+```diff
 + 'use strict';
 +
 + const Route = use('Route');
@@ -126,7 +126,7 @@ Sorry, I'm not forget it, but now I will tell you what is it.
 
 In `ExampleController.js` write this:
 
-```js
+```diff
 + 'use strict';
 +
 + const Validator = use('Validator');
@@ -152,7 +152,7 @@ In `ExampleController.js` write this:
 
 And last, set environment variable in `.env` file:
 
-```
+```diff
 + NODE_ENV=development
 + 
 + APP_NAME=
@@ -182,11 +182,11 @@ $ node server.js
 Done! Now access to [http://localhost:3000/api/example](http://localhost:3000/api/example) it should return following json:
 
 ```json
-+ {
-+   status: true,
-+   data: {
-+     foo: "bar"
-+   }
-+ }
+{
+  status: true,
+  data: {
+    foo: "bar"
+  }
+}
 ```
 
