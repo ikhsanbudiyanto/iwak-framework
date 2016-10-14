@@ -2,7 +2,7 @@
 A node micro-framework based on express.js
 
 
-## Instalation
+## Installation
 
 Since this framework is published to npm, you can install this with following command:
 
